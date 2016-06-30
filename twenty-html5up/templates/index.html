@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% include 'banner.html' %}
+
+{% block content %}
+<!-- Main -->
+<article id="main">
+
+  <header class="special container">
+    <span class="icon fa-bullhorn"></span>
+    <h2>Learn what makes the <strong>Fuelfree Generator</strong><br />
+      a truly revolutionary device:
+    </h2>
+  </header>
+
+  <!-- One -->
+  <section class="wrapper style2 container special-alt">
+    <div class="row wrapper style5">
+      <div class="8u -2u list">
+
+
+          <ul class="feature-icons">
+            <li><span class="icon fa-bolt"><span class="label">A New Source of Energy</span></span></li>
+          </ul>
+          <strong>A New Source of Energy</strong><br />
+          The FFG produces electricity by cooling its surrounding air.<br />
+          By leveraging the kinetic energy of air's molecules as its energy source it is guaranteed not to run out of energy supply.<br /><br /><br />
+
+          <ul class="feature-icons">
+            <li><span class="icon fa-globe"><span class="label">Environmentally Friendly</span></span></li>
+          </ul>
+          <strong>Environmentally Friendly</strong><br />
+          The FFG does not emit any pollutants, and does not heat its environment - In fact, in order to produce electricity, It cools the surrounding air!<br /><br /><br />
+
+          <ul class="feature-icons">
+            <li><span class="icon fa-spinner"><span class="label">An Unlimited Supply of Electricity</span></span></li>
+          </ul>
+          <strong>An Unlimited Supply of Electricity</strong><br />
+          The FFG produces electricity on-demand - You will never to pay another electricity bill again!<br /><br /><br />
+
+          <ul class="feature-icons">
+            <li><span class="icon fa-cog"><span class="label">Extremely Reliable</span></span></li>
+          </ul>
+          <strong>Extremely Reliable</strong><br />
+          The FFG is extremely reliable - it work under any weather conditions, at any altitude, non stop, providing a sustained rate of electricity which you can count on to supply your day to day needs.<br /><br /><br />
+
+          <ul class="feature-icons">
+            <li><span class="icon fa-github"><span class="label">Open Source Hardware</span></span></li>
+          </ul>
+          <strong>Open Source Hardware</strong><br />
+          All the technology behind the FFG has been made available to the public. Check out our <a href="fuelfreegen.github.io">github.io</a> website in order to grok the science and technology behind the FFG.<br /><br /><br />
+
+          <footer>
+            <ul class="buttons">
+              <li><a href="../the-technology" class="button">Dive Deeper</a></li>
+            </ul>
+          </footer>
+          <br /><br />
+
+      </div>
+      <!--      <div class="4u skel-cell-important">
+
+              <ul class="feature-icons">
+                <li><span class="icon fa-bolt"><span class="label">A New Source of Energy</span></span></li>
+                <li><span class="icon fa-globe"><span class="label">Environmentally Friendly</span></span></li>
+                <li><span class="icon fa-spinner"><span class="label">An Unlimited Supply of Electricity</span></span></li>
+                <li><span class="icon fa-cog"><span class="label">Extremely Reliable</span></span></li>
+                <li><span class="icon fa-github"><span class="label">Open Source Hardware</span></span></li>
+                <li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
+              </ul>
+
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Two -->
+  <section class="wrapper style1 container special">
+    <div class="row">
+
+      {% for article in articles_page.object_list %}
+      <div class="4u">
+
+        <section>
+          <span class="icon feature fa-{{ article.icon }}"></span>
+          <header>
+            <a href="{{ SITEURL }}/{{ article.url }}" rel='bookmark'><h3>{{ article.title }}</h3></a>
+          </header>
+          <p>{{ article.content[:196]|striptags }}</p>
+          <footer>
+              <ul class="buttons">
+                  <li><a href="{{ SITEURL }}/{{ article.url }}" class="button small">Read More</a></li>
+              </ul>
+          </footer>
+        </section>
+
+      </div>
+      {% endfor %}
+
+    </div> <!-- /.row -->
+
+    {% include 'pagination.html' %}
+
+  </section> <!-- /section -->
+
+</article>
+
+{% endblock content %}
