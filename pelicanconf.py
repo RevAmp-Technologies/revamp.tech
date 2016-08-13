@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'RevAmp Technologies'
 SITENAME = u'RevAmp Technologies'
-SITEURL = u'hhtp://revamp.tech'
+SITEURL = u'http://revamp.tech'
 
 PATH = 'content'
 STATIC_PATHS = ['images',
@@ -16,6 +16,8 @@ STATIC_PATHS = ['images',
 PAGE_DIR = 'pages'
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}/index.html'
+
+PAGE_ORDER_BY = 'basename'
 
 
 ARTICLE_PATHS = ['blog']
@@ -45,7 +47,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = True
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -66,5 +68,5 @@ JINJA_FILTERS = { 'sidebar': sidebar }
 
 # Added for revamp.tech
 TYPOGRIFY = True
-MENUITEMS = [('Home', 'index.html')]
+MENUITEMS = [('Home', '/index.html')]
 DIRECT_TEMPLATES = ['index']
