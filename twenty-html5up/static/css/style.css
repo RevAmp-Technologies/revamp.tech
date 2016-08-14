@@ -399,6 +399,17 @@
 					background: #e1b89b;
 				}
 
+			.icon.circle.fa-facebook {
+				background: #3b5998;
+				color: white;
+			}
+
+				.icon.circle.fa-facebook:hover {
+					background: #3b5998;
+				}
+
+
+
 			.icon.circle.fa-bitbucket {
 				background: #da83ae;
 				color: white;

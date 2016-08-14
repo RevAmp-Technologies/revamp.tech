@@ -44,13 +44,14 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('facebook', 'https://www.facebook.com/RevAmpTech'),
+          ('twitter', 'https://twitter.com/revamptech'),
+          ('github', 'https://revamp-technologies.github.io/'),)
 
-DEFAULT_PAGINATION = True
+DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 
 THEME = "twenty-html5up"
